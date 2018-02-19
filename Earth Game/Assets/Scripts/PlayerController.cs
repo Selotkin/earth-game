@@ -32,4 +32,10 @@ public class PlayerController : MonoBehaviour
         //transform.Rotate(0f, rotation * rotationSpeed * Time.fixedDeltaTime, 0f, Space.Self);
     }
 
+	void OnCollisionEnter(Collision collision)
+	{	
+		if(collision.collider.tag == "Meteor")
+			Destroy (gameObject);
+	}
+
 }

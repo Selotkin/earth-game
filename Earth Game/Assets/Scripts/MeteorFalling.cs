@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MeteorFalling : MonoBehaviour {
 
+	public GameObject explosionEffect;
+
     private Rigidbody rigid;
 	// Use this for initialization
 	void Start () {
@@ -16,7 +18,10 @@ public class MeteorFalling : MonoBehaviour {
 	}
 
     private void OnCollisionEnter(Collision collision)
-    {
-        Destroy(gameObject);
+    {	
+		if (collision.collider.tag == "Earth" || collision.collider.tag == "Player") {
+			Instantiate (explosionEffect, transform.position, transform.rotation);
+			Destroy(gameObject);
+		}	
     }
 }

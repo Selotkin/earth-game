@@ -380,7 +380,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &155564447
 Prefab:
   m_ObjectHideFlags: 0
@@ -489,6 +489,10 @@ Prefab:
     - target: {fileID: 4353972167979376, guid: fc4245223e4122142bb14239d44230ef, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959030373088092, guid: fc4245223e4122142bb14239d44230ef, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc4245223e4122142bb14239d44230ef, type: 2}
@@ -3690,6 +3694,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2d4c2d1c6c0eb14ab37f913d0e660fd, type: 2}
+    - target: {fileID: 100000, guid: 1cb44d1ed4b05d64cac7aba7b45ee8ad, type: 3}
+      propertyPath: m_TagString
+      value: Earth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cb44d1ed4b05d64cac7aba7b45ee8ad, type: 3}
   m_IsPrefabParent: 0

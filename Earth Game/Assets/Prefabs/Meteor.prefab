@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54960675982342214}
   m_Layer: 0
   m_Name: Meteor
-  m_TagString: Untagged
+  m_TagString: Meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7d222094ac91747887c606bd2de675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 1883873326633006, guid: f5e3e3bc404df4a44b827c79826f2a45,
+    type: 2}
 --- !u!135 &135561627961326892
 SphereCollider:
   m_ObjectHideFlags: 1

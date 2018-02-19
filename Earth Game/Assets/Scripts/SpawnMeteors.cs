@@ -18,8 +18,8 @@ public class SpawnMeteors : MonoBehaviour {
     
     private IEnumerator Spawn()
     {
-        float theta = Mathf.Deg2Rad * Random.Range(0, 180);
-        float phi = Mathf.Deg2Rad * Random.Range(0, 360);
+		float theta = Mathf.Deg2Rad * Random.Range(0, 180);
+		float phi = Mathf.Deg2Rad * Random.Range(0, 360);
         float x = 50 * Mathf.Sin(theta) * Mathf.Cos(phi);
         float y = 50 * Mathf.Sin(theta) * Mathf.Sin(phi);
         float z = 50 * Mathf.Cos(theta);
