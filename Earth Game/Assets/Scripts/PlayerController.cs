@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
     private float rotation;
     private float moveForward;
     private Rigidbody rb;
+	private bool playerIsDead = false;
 
+	public bool PlayerIsDead{
+		get{ return playerIsDead;}
+	}
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -34,8 +38,11 @@ public class PlayerController : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{	
-		if(collision.collider.tag == "Meteor")
+		if (collision.collider.tag == "Meteor") {
 			Destroy (gameObject);
+			playerIsDead = true;
+		}
+			
 	}
 
 }

@@ -9,15 +9,8 @@ public class SpawnMeteors : MonoBehaviour {
 	void Start () {
         StartCoroutine(Spawn());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        Debug.Log(Mathf.Sin(Mathf.Deg2Rad*45));
-	}
-    
-    
     private IEnumerator Spawn()
-    {
+    {	
 		float theta = Mathf.Deg2Rad * Random.Range(0, 180);
 		float phi = Mathf.Deg2Rad * Random.Range(0, 360);
         float x = 50 * Mathf.Sin(theta) * Mathf.Cos(phi);
@@ -27,6 +20,7 @@ public class SpawnMeteors : MonoBehaviour {
         GameObject newMeteor = Instantiate(meteor) as GameObject;
         newMeteor.transform.position = pos;
         yield return new WaitForSeconds(0.1f);
-        StartCoroutine(Spawn());
+		if(!GameManager.instance.GameOver)
+        	StartCoroutine(Spawn());
     }
 }
